@@ -1,10 +1,14 @@
 /* 1 Ospiti from cdi */
-SELECT `name`, `lastname`, `document_type`
+SELECT `name`, 
+        `lastname`, 
+        `document_type`
 FROM `ospiti`
 WHERE `document_type` = "CI";
 
 /* 2 Ospiti dopo 1988 */
-SELECT `name`, `lastname`, `date_of_birth`
+SELECT `name`, 
+        `lastname`, 
+        `date_of_birth`
 FROM `ospiti` 
 WHERE YEAR(`date_of_birth`) >= 1988;
 SELECT COUNT(`date_of_birth`)
@@ -12,12 +16,14 @@ FROM `ospiti`
 WHERE YEAR(`date_of_birth`) >= 1988; 
 
 /* 3 Ospiti sopra 20 anni */
-SELECT `name`, `date_of_birth`
+SELECT `name`, 
+        `date_of_birth`
 FROM `ospiti`
 WHERE `date_of_birth` <= (YEAR(CURRENT_DATE()) - 20);
 
 /* 4 Ospiti start D */
-SELECT `name`, `lastname`
+SELECT `name`, 
+        `lastname`
 FROM `ospiti`
 WHERE `name` LIKE "D%";
 
